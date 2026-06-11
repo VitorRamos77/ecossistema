@@ -1,0 +1,78 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "cppbuild",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-std=c++17",
+                "-g3",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/core/Organismo.cpp",
+                "${workspaceFolder}/src/core/Animal.cpp",
+                "${workspaceFolder}/src/core/WorldManager.cpp",
+                "${workspaceFolder}/src/core/OrganismoFactory.cpp",
+                "${workspaceFolder}/src/entities/Planta.cpp",
+                "${workspaceFolder}/src/entities/Presa.cpp",
+                "${workspaceFolder}/src/entities/Predador.cpp",
+                "-I${workspaceFolder}/src",
+                "-o",
+                "${workspaceFolder}/ecosystem_sim.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compila todos os arquivos do projeto",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "C/C++: g++ build active file",
+            "type": "cppbuild",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-std=c++17",
+                "-g3",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/core/Organismo.cpp",
+                "${workspaceFolder}/src/core/Animal.cpp",
+                "${workspaceFolder}/src/core/WorldManager.cpp",
+                "${workspaceFolder}/src/core/OrganismoFactory.cpp",
+                "${workspaceFolder}/src/entities/Planta.cpp",
+                "${workspaceFolder}/src/entities/Presa.cpp",
+                "${workspaceFolder}/src/entities/Predador.cpp",
+                "-I${workspaceFolder}/src",
+                "-o",
+                "${workspaceFolder}/ecosystem_sim.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "detail": "Sobrescreve o build de arquivo único — compila o projeto inteiro",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "${workspaceFolder}/ecosystem_sim.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "dependsOn": "build",
+            "problemMatcher": []
+        }
+    ]
+}

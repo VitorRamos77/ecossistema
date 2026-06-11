@@ -1,0 +1,9 @@
+Coloque aqui o arquivo font.ttf para que o HUD seja exibido.
+
+Opcoes gratuitas (licenca livre):
+  - DejaVu Sans:  https://dejavu-fonts.github.io/  -> DejaVuSans.ttf
+  - Liberation Sans (geralmente ja instalado no Windows em C:\Windows\Fonts\)
+
+Renomeie o arquivo escolhido para "font.ttf" e coloque nesta pasta.
+
+Sem o arquivo, o jogo roda normalmente mas sem texto no HUD.

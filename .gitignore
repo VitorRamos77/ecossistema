@@ -1,0 +1,10 @@
+# Builds
+build/
+build_sfml/
+*.exe
+*.o
+*.obj
+
+# IDE / SO
+.vscode/ipch/
+Thumbs.db
